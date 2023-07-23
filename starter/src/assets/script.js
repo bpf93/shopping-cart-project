@@ -129,7 +129,18 @@ function removeProductFromCart(productId) {
   - cartTotal should return the sum of the products in the cart
 */
 
-function cartTotal() {}
+/*Calculate the sum of the products in the cart
+- Calculate the product (as in multiplation) of each product's price and quantity
+- Add the products together
+*/
+
+function cartTotal() {
+  let sum = 0;
+  cart.forEach(product => {
+  sum += product.price * product.quantity;
+  });
+  return sum;
+}
 
 /* Create a function called emptyCart that empties the products from the cart */
 
@@ -147,16 +158,16 @@ function cartTotal() {}
    npm run test
 */
 
-module.exports = {
-   products,
-   cart,
-   addProductToCart,
-   increaseQuantity,
-   decreaseQuantity,
-   removeProductFromCart,
-   cartTotal,
-   pay, 
-   emptyCart,
-   /* Uncomment the following line if completing the currency converter bonus */
-   // currency
-}
+//module.exports = {
+//   products,
+//   cart,
+//   addProductToCart,
+//   increaseQuantity,
+//   decreaseQuantity,
+//   removeProductFromCart,
+//   cartTotal,
+//   pay, 
+//   emptyCart,
+//   /* Uncomment the following line if completing the currency converter bonus */
+//   // currency
+//}
