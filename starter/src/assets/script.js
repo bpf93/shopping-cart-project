@@ -48,6 +48,22 @@ const cart = [];
   - if the product is not already in the cart, add it to the cart
 */
 
+/**
+ - Get product based on productId
+ - Increase quantity of product
+ - If not in cart, add product to cart
+ */
+function addProductToCart(productId) {
+  products.forEach(product => {
+    if (productId === product.productId) {
+      product.quantity += 1;
+      if (!cart.includes(product)) {
+        cart.push(product);
+      }
+    }
+  });
+}
+
 /* Create a function named increaseQuantity that takes in the productId as an argument
   - increaseQuantity should get the correct product based on the productId
   - increaseQuantity should then increase the product's quantity
@@ -69,6 +85,8 @@ const cart = [];
   - cartTotal should iterate through the cart to get the total of all products
   - cartTotal should return the sum of the products in the cart
 */
+
+function cartTotal() {}
 
 /* Create a function called emptyCart that empties the products from the cart */
 
