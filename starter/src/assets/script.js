@@ -144,6 +144,11 @@ function cartTotal() {
 
 /* Create a function called emptyCart that empties the products from the cart */
 
+/* Remove elements, starting from index 0 until end of array */
+function emptyCart() {
+  cart.splice(0, cart.length);
+};
+
 /* Create a function named pay that takes in an amount as an argument
   - pay will return a negative number if there is a remaining balance
   - pay will return a positive number if money should be returned to customer
