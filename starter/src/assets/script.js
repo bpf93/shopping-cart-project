@@ -154,6 +154,22 @@ function emptyCart() {
   - pay will return a positive number if money should be returned to customer
 */
 
+/* */
+let totalPaid = 0;
+
+function pay(amount) {
+  totalPaid += amount;
+    if (totalPaid === cartTotal()) {
+      return 0;
+    } else if (totalPaid > cartTotal()) {
+      //Cash returned as a positive number
+      return Math.abs(totalPaid - cartTotal());
+    } else if (totalPaid < cartTotal()) {
+      //Remaining balance as a negative number
+      return -Math.abs(cartTotal() - totalPaid);
+    }
+  }
+
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
 
 
@@ -163,16 +179,16 @@ function emptyCart() {
    npm run test
 */
 
-//module.exports = {
-//   products,
-//   cart,
-//   addProductToCart,
-//   increaseQuantity,
-//   decreaseQuantity,
-//   removeProductFromCart,
-//   cartTotal,
-//   pay, 
-//   emptyCart,
-//   /* Uncomment the following line if completing the currency converter bonus */
-//   // currency
-//}
+module.exports = {
+   products,
+   cart,
+   addProductToCart,
+   increaseQuantity,
+   decreaseQuantity,
+   removeProductFromCart,
+   cartTotal,
+   pay, 
+   emptyCart,
+   /* Uncomment the following line if completing the currency converter bonus */
+   // currency
+}
