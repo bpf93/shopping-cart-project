@@ -1,3 +1,5 @@
+This is the 3rd project I completed as a part of the Udacity Front-End Web Development Nanodegree Program. Below is the information that was provided to complete the project:
+
 # Shopping Cart Functionality
 
 You will be creating the core functionality used for a storefront application. The visual of the storefront as well as the JavaScript necessary to connect the code you will write, to that visual have already been created.
